@@ -17,18 +17,13 @@
                 <div class="flex gap-3">
                     <Icon class="text-xl text-gray-300 shrink-0 mt-1" name="material-symbols:call" />
                     <div class="flex flex-col gap-2">
-                        <a href="tel:+79507208655"
-                            class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">+7 (950)
-                            720-86-55</a>
-                        <a href="tel:+73512489005"
-                            class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">+7 (351)
-                            248-90-05</a>
+                        <NuxtLink to="tel:+79507208655" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">+7 (950) 720-86-55</NuxtLink>
+                        <NuxtLink to="tel:+73512489005" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">+7 (351) 248-90-05</NuxtLink>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
                     <Icon class="text-xl text-gray-300 shrink-0" name="material-symbols:alternate-email" />
-                    <a href="mailto:info@tsv74.ru"
-                        class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">info@tsv74.ru</a>
+                    <NuxtLink to="mailto:info@tsv74.ru" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">info@tsv74.ru</NuxtLink>
                 </div>
             </div>
 
@@ -36,12 +31,10 @@
             <div class="flex flex-col gap-4">
                 <p class="text-lg font-semibold text-gray-200">Навигация</p>
                 <div class="flex flex-col gap-2">
-                    <a href="/about" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">О
-                        компании</a>
-                    <a href="/services"
-                        class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Услуги</a>
-                    <a href="/contacts"
-                        class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Контакты</a>
+                    <NuxtLink to="/services" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Главная
+                    </NuxtLink>
+                    <NuxtLink to="/contacts" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Каталог продукции</NuxtLink>
+                    <NuxtLink to="/about" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">О компании</NuxtLink>
                 </div>
             </div>
         </div>
