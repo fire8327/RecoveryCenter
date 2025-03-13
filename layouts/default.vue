@@ -2,7 +2,7 @@
     <Header/>
     <main class="grid-container gap-y-14 md:gap-y-20 xl:gap-y-28 grow my-10">
         <slot/>        
-        <div class="bg-[url(/images/body/separator.png)] w-full h-16 bg-center"></div>
+        <Separator></Separator>
     </main>
     <Footer/>
 </template> 
