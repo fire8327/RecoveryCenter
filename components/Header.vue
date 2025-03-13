@@ -12,7 +12,7 @@
                     <NuxtLink to="/" class="transition-all duration-500 hover:opacity-80">
                         <Icon class="text-3xl text-blue-500" name="material-symbols:shopping-cart-rounded"/>
                     </NuxtLink>
-                    <NuxtLink to="/" class="transition-all duration-500 hover:opacity-80">
+                    <NuxtLink to="/auth" class="transition-all duration-500 hover:opacity-80">
                         <Icon class="text-3xl text-blue-500" name="material-symbols:person"/>
                     </NuxtLink>
                 </div>
