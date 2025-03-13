@@ -11,7 +11,7 @@
             <p class="font-semibold font-mono tracking-widest text-blue-500">или</p>
             <div class="w-1/3 h-px bg-blue-500"></div>  
         </div>
-        <NuxtLink to="/auth" class="mx-auto px-4 py-2 border border-blue-500 text-blue-500 rounded-full w-[160px] text-center transition-all duration-500 hover:text-white hover:bg-blue-500">Регистрация</NuxtLink>
+        <NuxtLink to="/reg" class="mx-auto px-4 py-2 border border-blue-500 text-blue-500 rounded-full w-[160px] text-center transition-all duration-500 hover:text-white hover:bg-blue-500">Регистрация</NuxtLink>
     </FormKit>
 </template>
 
