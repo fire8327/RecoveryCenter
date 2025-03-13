@@ -16,25 +16,25 @@
         <p class="mainHeading">Контактная информация</p>
         <p>Вы можете связаться позвонив или написав нам, или оставить заявку и наши менеджеры свяжутся с Вами:</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
                 <p class="text-lg text-blue-500">Адрес для корреспонденции</p>
                 <p>454038, г.Челябинск, а/я 4458</p>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
                 <p class="text-lg text-blue-500">Производственный цех</p>
                 <p>г.Челябинск, ул.Промышленная, д.1В</p>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
                 <p class="text-lg text-blue-500">Телефоны</p>
                 <NuxtLink to="tel:+79507208655" class="hover:text-blue-500 transition-all duration-500">+7 (950) 720-86-55</NuxtLink>
                 <NuxtLink to="tel:+73512489005" class="hover:text-blue-500 transition-all duration-500">+7 (351) 248-90-05</NuxtLink>
             </div>
             <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-1">
                     <p class="text-lg text-blue-500">Общая почта</p>
                     <NuxtLink to="mailto:info@tsv74.ru" class="hover:text-blue-500 transition-all duration-500">info@tsv74.ru</NuxtLink>
                 </div>
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-1">
                     <p class="text-lg text-blue-500">Технический отдел</p>
                     <NuxtLink to="mailto:tehnolog@tsv74.ru" class="hover:text-blue-500 transition-all duration-500">tehnolog@tsv74.ru</NuxtLink>
                 </div>
