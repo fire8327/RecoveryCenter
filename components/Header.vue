@@ -6,7 +6,7 @@
             </NuxtLink>
             <div class="flex items-center gap-6">
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">Главная</NuxtLink>
-                <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">Каталог продукции</NuxtLink>
+                <NuxtLink to="/catalog" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">Каталог продукции</NuxtLink>
                 <NuxtLink to="/about" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">О компании</NuxtLink>
                 <div class="flex items-center gap-2">
                     <NuxtLink to="/" class="transition-all duration-500 hover:opacity-80">
