@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-[#373737] py-12 px-6 w-full col-span-full text-white">
-        <div class="wrapper mx-auto flex max-md:flex-col md:justify-between gap-8">
+        <div class="wrapper mx-auto flex max-lg:flex-col lg:justify-between gap-8">
             <!-- Описание -->
             <p class="text-gray-400 text-base leading-relaxed max-w-xl">
                 Профессиональное изготовление, ремонт и восстановление деталей с 2025 года. Мы гарантируем качество и
