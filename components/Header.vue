@@ -9,7 +9,7 @@
                 <NuxtLink to="/catalog" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">Каталог продукции</NuxtLink>
                 <NuxtLink to="/about" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">О компании</NuxtLink>
                 <div class="flex items-center gap-2">
-                    <NuxtLink to="/" class="transition-all duration-500 hover:opacity-80">
+                    <NuxtLink to="/cart" class="transition-all duration-500 hover:opacity-80">
                         <Icon class="text-3xl text-blue-500" name="material-symbols:shopping-cart-rounded"/>
                     </NuxtLink>
                     <NuxtLink to="/auth" class="transition-all duration-500 hover:opacity-80">

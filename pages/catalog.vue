@@ -15,13 +15,13 @@
                     input-class="focus:outline-none px-4 py-1.5 bg-white rounded-full border w-full transition-all duration-500 border-blue-500" />
             </div>
             <div class="flex items-center gap-2">
-                <button class="w-fit px-4 py-1.5 rounded-full bg-emerald-500 text-white">Применить</button>
-                <button class="w-fit px-4 py-1.5 rounded-full bg-red-500 text-white">Отменить</button>
+                <button class="w-fit px-4 py-1.5 rounded-full bg-emerald-500 text-white transition-all duration-500 hover:opacity-50">Применить</button>
+                <button class="w-fit px-4 py-1.5 rounded-full bg-red-500 text-white transition-all duration-500 hover:opacity-50">Отменить</button>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-md" v-for="n in 8">
-                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80" alt="Изображение товара" class="w-full object-cover">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80" alt="Изображение товара" class="w-full aspect-video object-cover">
                 <div class="p-4 flex flex-col gap-3">
                     <p class="text-lg font-semibold text-gray-800">
                         Название товара
@@ -43,5 +43,9 @@
 </template>
 
 <script setup>
-
+/* название и язык страницы */
+useSeoMeta({
+    title: 'Каталог',
+    lang: 'ru'
+})
 </script>
