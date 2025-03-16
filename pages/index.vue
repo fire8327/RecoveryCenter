@@ -3,29 +3,29 @@
         <p class="mainHeading">Мы оказываем следующие виды услуг:</p>
         <div class="flex flex-col gap-4">
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">1</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">1</span>
                 <p class="text-gray-700 text-lg">Изготовление деталей по чертежам и индивидуальным проектам</p>
             </div>
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">2</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">2</span>
                 <p class="text-gray-700 text-lg">Проведение ремонтных и восстановительных работ металлических изделий
                 </p>
             </div>
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">3</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">3</span>
                 <p class="text-gray-700 text-lg">Проверка деталей на соответствие стандартам качества</p>
             </div>
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">4</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">4</span>
                 <p class="text-gray-700 text-lg">Проведение обслуживания по гарантии деталей, изготовленных в нашей
                     компании</p>
             </div>
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">5</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">5</span>
                 <p class="text-gray-700 text-lg">Проектирование изделий</p>
             </div>
             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-lg">
-                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full">6</span>
+                <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full shrink-0">6</span>
                 <p class="text-gray-700 text-lg">Выполнение конструкторской документации по техническому заданию или
                     образцам деталей</p>
             </div>
