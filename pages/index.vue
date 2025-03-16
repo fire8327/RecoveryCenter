@@ -37,6 +37,83 @@
             значительно сократиться, а в отдельных случаях его можно будет и вовсе избежать.</p>
     </div>
     <div class="flex flex-col gap-6">
+        <p class="mainHeading">Наши услуги</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/1.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Восстановление деталей</p>
+                    <p class="text-sm line-clamp-3">
+                        Восстанавливаем изношенные и повреждённые детали с использованием современных технологий.
+                        Повышаем срок службы деталей, минимизируя затраты на замену.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/2.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Восстановление крановых колёс</p>
+                    <p class="text-sm line-clamp-3">
+                        Восстанавливаем крановые колёса с восстановлением геометрии и поверхностей качения. Устраняем
+                        трещины и износ, продлевая срок службы оборудования.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/3.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Восстановление валов</p>
+                    <p class="text-sm line-clamp-3">
+                        Проводим восстановление валов с восстановлением посадочных мест и поверхностей. Повышаем
+                        устойчивость к нагрузкам и износу.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/4.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Восстановление катков, роликов</p>
+                    <p class="text-sm line-clamp-3">
+                        Восстанавливаем катки и ролики с заменой изношенных элементов. Восстанавливаем геометрию и
+                        обеспечиваем плавный ход механизма.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/5.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Механическая обработка</p>
+                    <p class="text-sm line-clamp-3">
+                        Выполняем токарную, фрезерную и шлифовальную обработку металлов. Обеспечиваем точность и
+                        соответствие требованиям чертежей.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="/images/services/6.jpg" class="w-full object-cover aspect-video">
+                <div class="p-4">
+                    <p class="text-xl font-mono font-semibold mb-2">Изготовление деталей по чертежам</p>
+                    <p class="text-sm line-clamp-3">
+                        Изготавливаем детали по индивидуальным чертежам с соблюдением всех параметров. Гарантируем
+                        высокое качество и точность готовых изделий.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex flex-col gap-6">
         <p class="mainHeading">Почему выбирают "Центр восстановления"?</p>
         <p>Услуги по металлообработке деталей выполняют специалисты, имеющие высокую квалификацию и большой опыт работы
             в этой сфере. Наши мастера внимательно следят за новинками в сфере металлообработки. Они осваивают новые
