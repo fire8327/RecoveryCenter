@@ -4,14 +4,14 @@
         <p>Мы работаем как с небольшими компаниями, так и с крупными заводами, предоставляя только качественные запчасти
             с гарантией. Наши специалисты имеют большой опыт работы и готовы предложить решения под индивидуальные
             запросы.</p>
-        <div class="flex w-full items-end justify-between">
-            <div class="flex items-center gap-4">
+        <div class="flex max-md:flex-col w-full md:items-end md:justify-between gap-4">
+            <div class="flex max-md:flex-col md:items-center gap-4">
                 <FormKit validation="required" messages-class="text-[#E9556D] font-mono" type="select"
                     :options="['Умолчанию', 'Цене', 'Наименованию']" label="Упорядочить по" name="filter"
-                    outer-class="w-fit"
+                    outer-class="w-full md:w-fit"
                     input-class="focus:outline-none px-4 py-1.5 bg-white rounded-full border w-full transition-all duration-500 border-blue-500" />
                 <FormKit validation="required" messages-class="text-[#E9556D] font-mono" type="select"
-                    :options="['Все', 'Грузоподъёмное', 'Промышленное']" label="Тип" name="type" outer-class="w-fit"
+                    :options="['Все', 'Грузоподъёмное', 'Промышленное']" label="Тип" name="type" outer-class="w-full md:w-fit"
                     input-class="focus:outline-none px-4 py-1.5 bg-white rounded-full border w-full transition-all duration-500 border-blue-500" />
             </div>
             <div class="flex items-center gap-2">
