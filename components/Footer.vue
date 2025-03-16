@@ -31,7 +31,7 @@
             <div class="flex flex-col gap-4">
                 <p class="text-lg font-semibold text-gray-200">Навигация</p>
                 <div class="flex flex-col gap-2">
-                    <NuxtLink to="/services" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Главная
+                    <NuxtLink to="/" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Главная
                     </NuxtLink>
                     <NuxtLink to="/catalog" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">Каталог продукции</NuxtLink>
                     <NuxtLink to="/about" class="text-gray-400 text-base hover:text-blue-500 transition-all duration-500">О компании</NuxtLink>

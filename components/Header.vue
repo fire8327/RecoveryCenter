@@ -22,6 +22,10 @@
             </button>
         </div>
         <div @click="isMenuShow = false" class="lg:hidden fixed z-[3] inset-0 bg-black/30 top-20" :class="{'max-lg:hidden' : !isMenuShow}"></div>
+        <button type="button" @click="messageTitle = null" class="fixed top-10 right-10 z-[11] cursor-pointer flex items-center gap-2 px-6 py-2 text-lg rounded-xl w-fit font-medium font-mono bg-white border border-[#131313]/10 shadow-[0px_0px_13px_-7px_#131313]" :class="messageType ? ' text-[#131313]/80' : 'text-red-500'" v-if="messageTitle">
+            <Icon class="text-3xl" name="material-symbols:close-small-rounded"/>
+            <span>{{messageTitle}}</span>
+        </button>
     </header>
 </template>
 
@@ -35,4 +39,12 @@ const nuxtApp = useNuxtApp()
 nuxtApp.hook('page:start', () => {
     isMenuShow.value = false
 })
+
+
+/* создание сообщений */
+const { messageTitle, messageType } = storeToRefs(useMessagesStore())
+
+    
+/* проверка входа */
+const { authenticated, role } = storeToRefs(useUserStore())
 </script>

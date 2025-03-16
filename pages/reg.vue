@@ -1,12 +1,12 @@
 <template>
     <FormKit @submit="regUser" type="form" :actions="false" messages-class="hidden" form-class="flex flex-col gap-6 items-center justify-center grow">
         <p class="mainHeading">Регистрация</p>
-        <div class="flex items-center lg:items-start gap-4 max-lg:flex-col md:w-2/3 lg:w-1/2">
+        <div class="flex items-center lg:items-start gap-4 max-lg:flex-col w-full md:w-2/3 lg:w-1/2">
             <FormKit v-model="user.surname" validation="required" messages-class="text-[#E9556D] font-mono" type="text" placeholder="Фамилия" name="Фамилия" outer-class="w-full lg:w-1/3" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
             <FormKit v-model="user.name" validation="required" messages-class="text-[#E9556D] font-mono" type="text" placeholder="Имя" name="Имя" outer-class="w-full lg:w-1/3" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
             <FormKit v-model="user.patronymic" validation="required" messages-class="text-[#E9556D] font-mono" type="text" placeholder="Отчество" name="Отчество" outer-class="w-full lg:w-1/3" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
         </div>
-        <div class="flex items-center lg:items-start gap-4 max-lg:flex-col md:w-2/3 lg:w-1/2">
+        <div class="flex items-center lg:items-start gap-4 max-lg:flex-col w-full md:w-2/3 lg:w-1/2">
             <FormKit v-model="user.login" validation="required" messages-class="text-[#E9556D] font-mono" type="text" placeholder="Логин" name="Логин" outer-class="w-full lg:w-1/2" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
             <FormKit v-model="user.password" validation="required|length:6" messages-class="text-[#E9556D] font-mono" type="password" placeholder="······" name="Пароль" outer-class="w-full lg:w-1/2" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
         </div>
@@ -40,4 +40,42 @@ const user = ref({
     phone: "",
     email: ""
 })
+
+
+/* создание сообщений */
+const { showMessage } = useMessagesStore()
+
+
+/* подключение БД и роутера */
+const supabase = useSupabaseClient()
+const router = useRouter()
+
+
+/* регистрация пользователя */
+const regUser = async () => {
+    const { data: users, error: usersError } = await supabase
+    .from('users')
+    .select("*")
+    .eq('login', user.value.login)
+
+    if (users[0]) {
+        user.value.login = ""
+        return showMessage("Такой  логин уже используется!", false)
+    } 
+    
+
+    const { data, error } = await supabase
+    .from('users')
+    .insert(user.value)
+    .select()
+
+    if (data) {
+        console.log(data)
+        showMessage('Успешная регистрация!', true)
+        router.push('/auth')
+    } else {
+        console.log(user.value)            
+        showMessage('Произошла ошибка!', false)
+    }
+}
 </script>
