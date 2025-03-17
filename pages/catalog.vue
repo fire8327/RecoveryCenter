@@ -26,6 +26,9 @@
                     <p class="text-sm">
                         {{product.description}}
                     </p>
+                    <p class="text-sm">
+                        {{product.property}}
+                    </p>
                     <div class="flex flex-col gap-2 mt-auto" v-if="product.type === 'prePriced'">
                         <p class="text-lg font-semibold text-blue-500">
                             {{ product.price.toLocaleString() }} ₽
