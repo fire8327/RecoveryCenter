@@ -32,6 +32,19 @@
         </div>
     </div>
 
+    <div class="flex flex-col gap-6">
+        <p class="mainHeading">Заказы</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" v-if="carts">
+            <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-md p-4 transition-all duration-500 hover:-translate-y-4" v-for="cart in carts">
+                <p class="text-xl"><span class="font-semibold font-mono">Id заказа:</span> {{ cart.id }}</p>
+                <p class="text-base"><span class="font-semibold font-mono">ФИО:</span> {{ cart.users.surname }} {{ cart.users.name }} {{ cart.users.patronymic }}</p>
+                <p class="text-base"><span class="font-semibold font-mono">Номер </span>телефона: {{ cart.users.phone }}</p>
+                <p class="text-base"><span class="font-semibold font-mono">Продукт:</span> {{ cart.products.name }}</p>
+                <p class="text-base"><span class="font-semibold font-mono">Количество:</span> {{ cart.count }}</p>                
+            </div>
+        </div>
+    </div>
+
     <!-- Выход из аккаунта -->
     <div class="flex flex-col gap-6">
         <p class="mainHeading">Выход из аккаунта</p>
@@ -95,6 +108,14 @@ const { data:bids, error:bidsError } = await supabase
 .from('bids')
 .select('*, users(*), products(*)')   
 .eq('userId', id.value)  
+
+
+/* заказы */
+const { data:carts, error:cartsError } = await supabase
+.from('cart')
+.select('*, products(*), users(*)')   
+.eq('userId', id.value)  
+.eq('status', 'Оформлен')  
 
 
 /* выход из аккаунта */
