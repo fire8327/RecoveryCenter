@@ -30,7 +30,7 @@
                         <p class="text-lg font-semibold text-blue-500">
                             {{ product.price.toLocaleString() }} ₽
                         </p>
-                        <button
+                        <button @click="addCart(product.id)"
                             class="bg-blue-500 border border-blue-500 text-white px-4 py-1.5 rounded-md hover:bg-transparent hover:text-blue-500 transition-all duration-500">
                             Купить
                         </button>
@@ -142,6 +142,42 @@ const makeBid = async () => {
     } else {
         console.log(user.value)            
         showMessage('Произошла ошибка!', false)
+    }
+}
+
+
+/* добавление в корзину */
+const addCart = async (productId) => {
+    const { data: carts } = await supabase
+    .from('cart')
+    .select(`*`)
+    .eq('status', 'В корзине')
+    .eq('userId', id.value)
+    .eq('productId', productId)
+
+    if (carts && carts.length > 0) {
+        await supabase
+        .from('cart')
+        .update({ count: `${Number(carts[0].count) + 1}` })
+        .eq('status', 'В корзине')
+        .eq('userId', id.value)
+        .eq('productId', productId)
+        .select()
+
+        showMessage("Количество обновлено!", true)
+    } else {
+        const { data, error } = await supabase
+        .from('cart')
+        .insert([
+            { userId: id.value, productId: productId, status: 'В корзине', count: 1 },
+        ])
+        .select()
+
+        if (error) {
+            showMessage("Произошла ошибка!", false)
+        } else {
+            showMessage("Добавлено в корзину!", true)
+        }
     }
 }
 </script>
