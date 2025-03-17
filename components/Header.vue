@@ -1,8 +1,9 @@
 <template>
     <header class="grid-container w-full py-4 relative">
         <div class="flex items-center justify-between">
-            <NuxtLink to="/" class="transition-all duration-500 hover:opacity-80">
-                <img src="/images/header/logo.png" alt="">
+            <NuxtLink to="/" class="transition-all duration-500 hover:-translate-x-4 flex items-center gap-2 text-blue-500">
+                <Icon class="text-3xl text-blue-500" name="material-symbols:settings-suggest-outline"/>
+                <span class="text-xl font-semibold font-mono">Центр Восстановления</span>
             </NuxtLink>
             <div class="flex items-center gap-6 max-lg:flex-col max-lg:py-6 max-lg:w-full max-lg:bg-white max-lg:left-0 max-lg:absolute max-lg:border-t border-blue-500 z-[5] transition-all duration-500" :class="isMenuShow ? 'max-lg:top-full' : 'max-lg:top-0 max-lg:-translate-y-full'">
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full">Главная</NuxtLink>
