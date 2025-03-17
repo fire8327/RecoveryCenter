@@ -37,7 +37,7 @@
                     </div>
                     <div class="flex flex-col gap-2 mt-auto" v-if="product.type === 'custom'">
                         <p class="text-lg font-semibold text-blue-500" v-if="product.type === 'custom'">Под заказ</p>
-                        <button @click="isFormShow = true"
+                        <button @click="isFormShow = true, productId = product.id"
                             class="bg-blue-500 border border-blue-500 text-white px-4 py-1.5 rounded-md hover:bg-transparent hover:text-blue-500 transition-all duration-500">
                             Оформить заявку
                         </button>
@@ -49,8 +49,8 @@
         <div :class="isFormShow ? 'top-1/2 -translate-y-1/2' : 'top-0 -translate-y-[2000px]'" class="flex flex-col gap-6 py-10 px-4 z-[5] bg-white wrapper w-[calc(100%-30px)] sm:w-[calc(100%-40px)] md:w-1/2 xl:w-1/4 left-1/2 -translate-x-1/2 fixed rounded-xl transition-all duration-500">
             <p class="text-2xl font-mono font-semibold text-center">Оформление заявки</p>
             <div class="flex items-center gap-2 w-full max-md:flex-col">
-                <button @click="" type="button" class="px-4 py-1.5 border border-blue-500 bg-blue-500 text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 hover:text-blue-500 hover:bg-transparent">Отправить</button>
-                <button @click="isFormShow = false" type="button" class="px-4 py-1.5 border border-blue-500 hover:bg-blue-500 hover:text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 text-blue-500 bg-transparent">Отменить</button>
+                <button @click="makeBid" type="button" class="px-4 py-1.5 border border-blue-500 bg-blue-500 text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 hover:text-blue-500 hover:bg-transparent">Отправить</button>
+                <button @click="isFormShow = false, profuctId = null" type="button" class="px-4 py-1.5 border border-blue-500 hover:bg-blue-500 hover:text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 text-blue-500 bg-transparent">Отменить</button>
             </div>
         </div>
     </div>
@@ -66,6 +66,10 @@ useSeoMeta({
 
 /* показ формы */
 const isFormShow = ref(false)
+
+
+/* сообщения */
+const { showMessage } = useMessagesStore()
 
 
 /* подключение БД */
@@ -115,5 +119,25 @@ const sortedProducts = computed(() => {
 const resetFilters = () => {
   selectedType.value = 'Все'
   sortMethod.value = 'По умолчанию'
+}
+
+
+/* пользователь и отправка заявки */
+const { id } = storeToRefs(useUserStore())
+const productId = ref()
+const makeBid = async () => {
+    const { data, error } = await supabase
+    .from('bids')
+    .insert([{ userId: id.value, productId: productId.value }])
+    .select()
+
+    if (data) {
+        console.log(data)
+        showMessage('Заявка отправлена!', true)
+        isFormShow.value = false
+    } else {
+        console.log(user.value)            
+        showMessage('Произошла ошибка!', false)
+    }
 }
 </script>

@@ -35,7 +35,7 @@ useSeoMeta({
 
 /* подключение БД и проверка пользователя */
 const supabase = useSupabaseClient() 
-const { authenticated, role, id } = storeToRefs(useUserStore())
+const { authenticated, id } = storeToRefs(useUserStore())
 
 const { data:users, error } = await supabase
 .from('users')

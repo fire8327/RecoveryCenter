@@ -43,8 +43,4 @@ nuxtApp.hook('page:start', () => {
 
 /* создание сообщений */
 const { messageTitle, messageType } = storeToRefs(useMessagesStore())
-
-    
-/* проверка входа */
-const { authenticated, role } = storeToRefs(useUserStore())
 </script>

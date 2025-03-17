@@ -32,33 +32,33 @@ const user = ref({
 
 /* создание сообщений и подключение хранилищ */
 const { showMessage } = useMessagesStore()
-    const { login } = useUserStore()
+const { login } = useUserStore()
 
 
-    /* подключение БД и роутера */
-    const supabase = useSupabaseClient()
-    const router = useRouter()
+/* подключение БД и роутера */
+const supabase = useSupabaseClient()
+const router = useRouter()
 
 
-    /* вход */
-    const authUser = async() => {  
-        const { data: users, error } = await supabase
-        .from('users')
-        .select("*")
-        .eq('login', user.value.login)
-    
-        if (!users[0]) {
-            user.value.login = ""
-            return showMessage("Неверно введен логин!", false)              
-        }
+/* вход */
+const authUser = async() => {  
+    const { data: users, error } = await supabase
+    .from('users')
+    .select("*")
+    .eq('login', user.value.login)
 
-        if (user.value.password !== users[0].password) {
-            user.value.password = ""
-            return showMessage('Неверно введен пароль!', false)            
-        }
+    if (!users[0]) {
+        user.value.login = ""
+        return showMessage("Неверно введен логин!", false)              
+    }
 
-        showMessage('Успешный вход!', true)
-        login(users[0].id, users[0].role)
-        router.push('/profile')
-    } 
+    if (user.value.password !== users[0].password) {
+        user.value.password = ""
+        return showMessage('Неверно введен пароль!', false)            
+    }
+
+    showMessage('Успешный вход!', true)
+    login(users[0].id)
+    router.push('/profile')
+} 
 </script>
