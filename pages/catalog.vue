@@ -14,7 +14,7 @@
                     :options="['Все', 'Грузоподъёмное', 'Промышленное']" label="Тип" name="type" outer-class="w-full md:w-fit"
                     input-class="focus:outline-none px-4 py-1.5 bg-white rounded-full border w-full transition-all duration-500 border-blue-500"/>
             </div>
-            <button @click="resetFilters" class="w-fit px-4 py-1.5 rounded-full bg-red-500 text-white transition-all duration-500 hover:opacity-50">Отменить</button>
+            <button @click="resetFilters" class="w-fit px-4 py-1.5 rounded-full border border-red-500 bg-red-500 text-white transition-all duration-500 hover:bg-transparent hover:text-red-500">Отменить</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-md" v-for="product in sortedProducts">
