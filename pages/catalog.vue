@@ -46,12 +46,15 @@
             </div>
         </div>
         <div @click="isFormShow = false" class="fixed z-[4] inset-0 bg-black/30" :class="{'hidden' : !isFormShow}"></div>
-        <div :class="isFormShow ? 'top-1/2 -translate-y-1/2' : 'top-0 -translate-y-[2000px]'" class="flex flex-col gap-6 py-10 px-4 z-[5] bg-white wrapper w-[calc(100%-30px)] sm:w-[calc(100%-40px)] md:w-1/2 xl:w-1/4 left-1/2 -translate-x-1/2 fixed rounded-xl transition-all duration-500">
-            <p class="text-2xl font-mono font-semibold text-center">Оформление заявки</p>
-            <div class="flex items-center gap-2 w-full max-md:flex-col">
-                <button @click="makeBid" type="button" class="px-4 py-1.5 border border-blue-500 bg-blue-500 text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 hover:text-blue-500 hover:bg-transparent">Отправить</button>
-                <button @click="isFormShow = false, profuctId = null" type="button" class="px-4 py-1.5 border border-blue-500 hover:bg-blue-500 hover:text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 text-blue-500 bg-transparent">Отменить</button>
-            </div>
+        <div :class="isFormShow ? 'top-1/2 -translate-y-1/2' : 'top-0 -translate-y-[2000px]'" class="z-[5] bg-white wrapper w-[calc(100%-30px)] sm:w-[calc(100%-40px)] md:w-1/2 xl:w-1/4 left-1/2 -translate-x-1/2 fixed rounded-xl transition-all duration-500">
+            <FormKit @submit="makeBid" type="form" :actions="false" messages-class="hidden" form-class="flex flex-col gap-6 py-10 px-4 grow">
+                <p class="text-2xl font-mono font-semibold text-center">Оформление заявки</p>
+                <FormKit v-model="productCount" validation="required|number" messages-class="text-[#E9556D] font-mono" type="text" placeholder="Количество товара" name="Количество товара" outer-class="w-full" input-class="focus:outline-none px-4 py-2 bg-white rounded-xl border border-transparent w-full transition-all duration-500 focus:border-blue-500 shadow-md"/>
+                <div class="flex items-center gap-2 w-full max-md:flex-col">
+                    <button type="submit" class="px-4 py-1.5 border border-blue-500 bg-blue-500 text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 hover:text-blue-500 hover:bg-transparent">Отправить</button>
+                    <button @click="isFormShow = false, productId = null" type="button" class="px-4 py-1.5 border border-blue-500 hover:bg-blue-500 hover:text-white rounded-full w-full md:w-1/2 text-center transition-all duration-500 text-blue-500 bg-transparent">Отменить</button>
+                </div>
+            </FormKit>
         </div>
     </div>
 </template>
@@ -125,10 +128,11 @@ const resetFilters = () => {
 /* пользователь и отправка заявки */
 const { id } = storeToRefs(useUserStore())
 const productId = ref()
+const productCount = ref()
 const makeBid = async () => {
     const { data, error } = await supabase
     .from('bids')
-    .insert([{ userId: id.value, productId: productId.value }])
+    .insert([{ userId: id.value, productId: productId.value, count: productCount.value }])
     .select()
 
     if (data) {

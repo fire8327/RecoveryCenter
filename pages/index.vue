@@ -40,7 +40,7 @@
         <p class="mainHeading">Наши услуги</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/1.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Восстановление деталей</p>
@@ -52,7 +52,7 @@
             </div>
 
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/2.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Восстановление крановых колёс</p>
@@ -64,7 +64,7 @@
             </div>
 
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/3.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Восстановление валов</p>
@@ -76,7 +76,7 @@
             </div>
 
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/4.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Восстановление катков, роликов</p>
@@ -88,7 +88,7 @@
             </div>
 
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/5.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Механическая обработка</p>
@@ -100,7 +100,7 @@
             </div>
 
             <div
-                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                class="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
                 <img src="/images/services/6.jpg" class="w-full object-cover aspect-video">
                 <div class="p-4">
                     <p class="text-xl font-mono font-semibold mb-2">Изготовление деталей по чертежам</p>
