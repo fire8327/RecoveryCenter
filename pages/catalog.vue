@@ -18,7 +18,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-md" v-for="product in sortedProducts">
-                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80" alt="Изображение товара" class="w-full aspect-video object-cover">
+                <img :src="`https://cspuhosvavgimmblmohl.supabase.co/storage/v1/object/public/images/products/${product.image}`" alt="Изображение товара" class="w-full aspect-video object-cover">
                 <div class="p-4 flex flex-col gap-3 grow">
                     <p class="text-lg font-semibold text-gray-800">
                         {{product.name}}
